@@ -1,0 +1,66 @@
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outreach Schema",
+  "type": "object",
+  "required": [
+    "company",
+    "channel",
+    "status"
+  ],
+  "properties": {
+    "company": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "Email",
+        "LinkedIn",
+        "Phone"
+      ]
+    },
+    "subject": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "follow_up_sequence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cta": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Scheduled",
+        "Sent",
+        "Replied",
+        "Booked"
+      ]
+    },
+    "scheduled_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}
+```

@@ -1,23 +1,33 @@
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Lead Schema",
-  "description": "Canonical schema for B2B SaaS lead generation and enrichment.",
+  "title": "Company Schema",
+  "description": "Canonical schema for company intelligence gathered during prospect research.",
   "type": "object",
+
   "required": [
-    "company",
+    "company_name",
     "website",
-    "lead_score",
+    "industry",
+    "country",
     "confidence"
   ],
+
   "properties": {
-    "company": {
+    "company_name": {
       "type": "string"
     },
 
     "website": {
       "type": "string",
       "format": "uri"
+    },
+
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
 
     "industry": {
@@ -28,6 +38,13 @@
     },
 
     "subcategory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "description": {
       "type": [
         "string",
         "null"
@@ -55,6 +72,13 @@
       ]
     },
 
+    "founded_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+
     "employee_count": {
       "type": [
         "integer",
@@ -66,21 +90,39 @@
       "type": [
         "string",
         "null"
+      ],
+      "enum": [
+        "Startup",
+        "Seed",
+        "Series A",
+        "Series B",
+        "Growth",
+        "Enterprise",
+        null
       ]
     },
 
-    "founded_year": {
-      "type": [
-        "integer",
-        "null"
-      ]
-    },
-
-    "linkedin_company": {
+    "business_model": {
       "type": [
         "string",
         "null"
+      ],
+      "enum": [
+        "B2B",
+        "B2C",
+        "B2B2C",
+        "Marketplace",
+        "SaaS",
+        "Services",
+        null
       ]
+    },
+
+    "target_customers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
 
     "products": {
@@ -90,7 +132,28 @@
       }
     },
 
-    "technologies": {
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "technology_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "integrations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "competitors": {
       "type": "array",
       "items": {
         "type": "string"
@@ -104,6 +167,13 @@
       }
     },
 
+    "growth_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
     "pain_points": {
       "type": "array",
       "items": {
@@ -111,64 +181,69 @@
       }
     },
 
-    "decision_maker": {
+    "linkedin_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "blog_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "careers_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "pricing_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "documentation_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "social_media": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "email": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "email"
-        },
         "linkedin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "x": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facebook": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "youtube": {
           "type": [
             "string",
             "null"
           ]
         }
       }
-    },
-
-    "personalization": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-
-    "recommended_offer": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-
-    "lead_score": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 100
-    },
-
-    "priority": {
-      "type": "string",
-      "enum": [
-        "Low",
-        "Medium",
-        "High"
-      ]
     },
 
     "confidence": {

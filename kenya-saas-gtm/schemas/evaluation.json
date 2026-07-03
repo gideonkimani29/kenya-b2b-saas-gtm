@@ -1,0 +1,33 @@
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lead Evaluation",
+  "type": "object",
+  "properties": {
+    "research_score": {
+      "type": "integer"
+    },
+    "enrichment_score": {
+      "type": "integer"
+    },
+    "qualification_score": {
+      "type": "integer"
+    },
+    "personalization_score": {
+      "type": "integer"
+    },
+    "json_valid": {
+      "type": "boolean"
+    },
+    "hallucination_detected": {
+      "type": "boolean"
+    },
+    "overall_score": {
+      "type": "integer"
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}
+```

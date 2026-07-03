@@ -1,0 +1,263 @@
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contact Schema",
+  "description": "Canonical schema for a decision maker or contact person.",
+  "type": "object",
+
+  "required": [
+    "full_name",
+    "company",
+    "confidence"
+  ],
+
+  "properties": {
+    "contact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "full_name": {
+      "type": "string"
+    },
+
+    "first_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "last_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "job_title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "department": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "seniority": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Founder",
+        "C-Level",
+        "VP",
+        "Director",
+        "Head",
+        "Manager",
+        "Individual Contributor",
+        null
+      ]
+    },
+
+    "company": {
+      "type": "string"
+    },
+
+    "company_domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "work_email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "email"
+    },
+
+    "email_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Verified",
+        "Unverified",
+        "Unknown",
+        null
+      ]
+    },
+
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "linkedin_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "twitter_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "decision_maker": {
+      "type": "boolean"
+    },
+
+    "buying_influence": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "High",
+        "Medium",
+        "Low",
+        null
+      ]
+    },
+
+    "persona": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "responsibilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "pain_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "buying_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "preferred_channel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Email",
+        "LinkedIn",
+        "Phone",
+        "Unknown",
+        null
+      ]
+    },
+
+    "last_contacted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+
+    "crm_owner": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}
+```
