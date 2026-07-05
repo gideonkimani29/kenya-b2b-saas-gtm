@@ -25,10 +25,10 @@ The outcome is a ready‑to‑use dataset that can be fed directly into downstre
 
 ## Revenue Upside (Illustrative)
 
-Assuming a conversion rate of 5% from high‑quality outreach and an average contract value (ACV) of USD 10,000 per customer:
+Assuming a conversion rate of 5% from high‑quality outreach and an average contract value (ACV) of ksh 10,000 per customer:
 
 - **Expected closed deals:** 20 × 0.05 = 1 deal
-- **Projected revenue:** 1 × USD 10,000 = USD 10,000
+- **Projected revenue:** 1 × USD 10,000 = ksh 10,000
 
 Even with a modest conversion rate, the pipeline delivers a quick ROI given the negligible acquisition cost (research time and automation). Scaling the pipeline to 100 leads would proportionally increase upside to ≈ USD 50,000 per run.
 
