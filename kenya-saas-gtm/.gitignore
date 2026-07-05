@@ -197,6 +197,7 @@ weights/
 checkpoints/
 gguf/
 *.gguf
+data/
 
 # Ollama
 
